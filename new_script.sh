@@ -69,8 +69,37 @@ do
 	echo "$line"
 done < "${1:-/dev/stdin}"
 
-'
+
 #output
+#if okay write output in file1 else file2
+#ls -al 1>file1.txt 2>file2.txt
+ls -al >& file1.txt #output & error same file
 
+#read message from another script new_script1.sh
+#run this script
+MESSAGE="message to display on another script"
+export MESSAGE
+./new_script1.sh
+'
 
+: '
+#read input from user and compare string length
+echo "enter 1st string"
+read srt1
+
+echo "enter 2nd string"
+read srt2
+
+if [ "$str1" \> "$str1" ]
+then
+	echo "$str1 big $str1 small"
+elif [ "$str1" \< "$str1" ]
+then
+	echo "$str1 big $str1 small"
+else
+	echo "string length are equal"
+fi
+'
+#lower case, echo ${str^}
+#upper case, echo ${str^^}
 
