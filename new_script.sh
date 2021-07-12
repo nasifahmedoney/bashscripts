@@ -172,7 +172,7 @@ done
 '
 
 #switch case
-
+: '
 select a in b c
 do
 	case $a in 
@@ -184,4 +184,17 @@ do
 		echo "error";;
 	esac
 done
+'
+
+
+#inotify-tools
+#sudo apt install inotify-tools
+: '
+inotifywait -m /home/user/monitor
+'
+
+
+
+
+
 
