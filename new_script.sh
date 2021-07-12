@@ -103,3 +103,66 @@ fi
 #lower case, echo ${str^}
 #upper case, echo ${str^^}
 
+
+
+
+#arithmatic expressions
+
+#n1=1
+#n2=2
+
+#echo $(( $n1+$n2 ))
+
+#arrays
+: '
+arr=('a' 'b' 'c')
+unset arr[1]
+arr[1]='aa'
+echo "${arr[@]}" #all elements
+
+echo "${arr[0]}" #0 1 2 ...
+
+echo "${!arr[@]}" #0 1 2 index positions
+
+echo "${#arr[@]}" #total number of elements
+'
+#functions
+: '
+function tesing_function()
+{
+	variable="this is a var"
+	echo "$variable"
+}
+
+tesing_function
+
+'
+
+
+#check folder exists in this dir
+: '
+echo "enter dir name"
+read dirname
+
+if [ -d "$dirname" ] #-f for files
+then
+	echo "exists"
+else
+	echo "does not exist"
+fi
+'
+
+#sending email
+
+#downloading files
+: '
+url=""
+curl ${url} > outputfile #or curl ${url} -O
+'
+
+
+
+
+
+
+
