@@ -157,12 +157,31 @@ fi
 #downloading files
 : '
 url=""
-curl ${url} > outputfile #or curl ${url} -O
+curl ${url} > outputfile #or curl ${url} -O #info: curl -I ${url}
 '
 
 
 
+#select
+: '
+select a in b c d e
+do
+	echo "selected $a"
+done
 
+'
 
+#switch case
 
+select a in b c
+do
+	case $a in 
+	b)
+		echo "b selected";;
+	c)
+		echo "c selected";;
+	*)
+		echo "error";;
+	esac
+done
 
