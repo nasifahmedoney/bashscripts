@@ -196,5 +196,18 @@ inotifywait -m /home/user/monitor
 
 
 
+#grep
+: '
+echo "enter filename"
+read filename
 
+if [[ -f $filename ]]
+then
+	echo "text to search"
+	read grepvar
+	grep -i -n $grepvar $filename # -i -n ignore case
+else
+	echo "file not found"
+fi
+'
 
