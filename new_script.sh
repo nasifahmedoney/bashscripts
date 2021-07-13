@@ -205,7 +205,7 @@ if [[ -f $filename ]]
 then
 	echo "text to search"
 	read grepvar
-	grep -i -n $grepvar $filename # -i -n ignore case
+	grep -i -n $grepvar $filename # -i -n ignore case, -i -n -c found number of times, -i -n -c -v ignoring the lines containing the word, command in terminal: man grep
 else
 	echo "file not found"
 fi
