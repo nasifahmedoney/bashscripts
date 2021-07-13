@@ -196,7 +196,7 @@ inotifywait -m /home/user/monitor
 
 
 
-#grep
+#grep, finding text in a file
 : '
 echo "enter filename"
 read filename
@@ -210,4 +210,23 @@ else
 	echo "file not found"
 fi
 '
+
+#awk finding a word in a line containing the word given
+: '
+echo "enter filename"
+read filename
+
+if [[ -f $filename ]]
+then
+	awk '/hello/ {print $1}' $filename #/hello/ {print $1,$2,$3} for multiple words,/hello<-find this word in a line/ 
+else
+	echo "file not found"
+fi
+'
+
+
+
+
+
+
 
