@@ -227,6 +227,14 @@ fi
 
 
 
+#sed, replace word in file or in console only
+
+: '
+read filename
+sed 's/word in file/replace with/g' $filename #g global all occurance, without g first occurance only in every line
+
+sed -i 's/word in file/replace with/g' $filename #write in file
+'
 
 
 
