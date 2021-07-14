@@ -237,4 +237,18 @@ sed -i 's/word in file/replace with/g' $filename #write in file
 '
 
 
+#debug bash script
+
+: '
+run command: bash -x ./new_script.sh
+or 
+
+#! /bin/bash -x
+
+or
+#! /bin/bash
+-x starting
+
++x stops in between
+
 
